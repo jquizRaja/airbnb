@@ -9,6 +9,7 @@ import axios from "axios";
 import Modal from "./Modal";
 import Heading from "../Heading";
 import Input from "../inputs/Input";
+import { toast } from "react-hot-toast";
 
 const RegisterModal = () => {
   const registerModal = useRegisterModal();
@@ -36,6 +37,7 @@ const RegisterModal = () => {
       })
       .catch((error) => {
         console.log(error);
+        toast.error("Something went Wrong!!");
       })
       .finally(() => {
         setIsLoading(false);
@@ -50,19 +52,32 @@ const RegisterModal = () => {
       gap-4
      "
     >
-      <Heading
-       title="Welcome AirBNB" 
-       subtitle="Create an Account" 
-       center 
-       />
-       <Input
+      <Heading title="Welcome AirBNB" subtitle="Create an Account" center />
+      <Input
         id="email"
         label="Email"
         disabled={isLoading}
         register={register}
         errors={errors}
         required
-       />
+      />
+      <Input
+        id="name"
+        label="Name"
+        disabled={isLoading}
+        register={register}
+        errors={errors}
+        required
+      />
+      <Input
+        id="password"
+        type="password"
+        label="Password"
+        disabled={isLoading}
+        register={register}
+        errors={errors}
+        required
+      />
     </div>
   );
 
