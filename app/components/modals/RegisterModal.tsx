@@ -8,6 +8,7 @@ import useRegisterModal from "@/app/hooks/useRegisterModal";
 import axios from "axios";
 import Modal from "./Modal";
 import Heading from "../Heading";
+import Input from "../inputs/Input";
 
 const RegisterModal = () => {
   const registerModal = useRegisterModal();
@@ -53,6 +54,14 @@ const RegisterModal = () => {
        title="Welcome AirBNB" 
        subtitle="Create an Account" 
        center 
+       />
+       <Input
+        id="email"
+        label="Email"
+        disabled={isLoading}
+        register={register}
+        errors={errors}
+        required
        />
     </div>
   );
