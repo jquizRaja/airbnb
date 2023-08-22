@@ -12,7 +12,7 @@ interface ModalProps {
   body?: React.ReactElement;
   footer?: React.ReactElement;
   actionLabel: string;
-  disabled?: string;
+  disabled?: boolean;
   secondaryAction?: () => void;
   secondaryLabel?: string;
   secondaryActionLabel?: string;
@@ -175,7 +175,19 @@ const Modal: React.FC<ModalProps> = ({
 
                 "
                 >
-                  <Button label="My Button" />
+                  {secondaryAction && secondaryActionLabel && (
+                    <Button
+                      outline
+                      onClick={handleSecondaryAction}
+                      disabled={disabled}
+                      label={secondaryActionLabel}
+                    />
+                  )}
+                  <Button
+                    onClick={handleSubmit}
+                    disabled={disabled}
+                    label={actionLabel}
+                  />
                 </div>
               </div>
             </div>
