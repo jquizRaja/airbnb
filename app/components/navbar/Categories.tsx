@@ -1,10 +1,14 @@
+'use client'
 import React from "react";
 import Container from "../Container";
-import { TbBeach } from "react-icons/tb";
-import { GiWindmill } from "react-icons/gi";
+import { TbBeach,TbMountain,TbPool} from "react-icons/tb";
+import { GiBarn, GiBoatFishing, GiCactus, GiCastle, GiCaveEntrance, GiForestCamp, GiIsland, GiWindmill } from "react-icons/gi";
 import { MdOutlineVilla } from "react-icons/md";
 import CategoryBox from "../CategoryBox";
 import { useSearchParams, usePathname } from "next/navigation";
+import {FaSkiing} from 'react-icons/fa'
+import {BsSnow} from 'react-icons/bs'
+import {IoDiamond} from 'react-icons/io5'
 
 export const categories = [
   {
@@ -23,9 +27,64 @@ export const categories = [
     description: "This property has windmills ",
   },
   {
-    label: "WindMills",
-    icon: GiWindmill,
-    description: "This property has Modern amenities ",
+    label: "Castles",
+    icon: GiCastle,
+    description: "This property in a castle ",
+  },
+  {
+    label: "CountrySide",
+    icon: TbMountain,
+    description: "This property has Country side Mountains",
+  },
+  {
+    label: "Pools",
+    icon: TbPool,
+    description: "This property has a Swimming Pool",
+  },
+  {
+    label: "Islands",
+    icon: GiIsland,
+    description: "This property has a Swimming Pool",
+  },
+  {
+    label: "Lake",
+    icon: GiBoatFishing,
+    description: "This property close to Lake",
+  },
+  {
+    label: "Skiing",
+    icon: FaSkiing,
+    description: "This property has skiing activities",
+  },
+  {
+    label: "Camping",
+    icon: GiForestCamp,
+    description: "This property has Camping activities",
+  },
+  {
+    label: "Arctic",
+    icon: BsSnow,
+    description: "This property in Arctic",
+  },
+  {
+    label: "Cave",
+    icon: GiCaveEntrance,
+    description: "This property in a  Cave ",
+  },
+  {
+    label: "Desert",
+    icon: GiCactus,
+    description: "This property in Desert ",
+  },
+  {
+    label: "Barns",
+    icon: GiBarn,
+    description: "This property in Desert ",
+  },
+  {
+    label: "Lux",
+    icon: IoDiamond,
+    description: "This property in Desert ",
   },
 ];
 
