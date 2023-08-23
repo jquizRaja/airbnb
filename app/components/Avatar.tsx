@@ -1,18 +1,23 @@
-'use client'
-import Image from 'next/image';
-import React from 'react'
+"use client";
+import Image from "next/image";
+import React from "react";
 
-const Avatar = () => {
-  return (
-    <Image className='
-    rounded-full
-    '
-     src='/images/avatar.png'
-     height={30}
-     width={30}
-     alt='Avatar'
-    />
-  )
+interface AvatarProps {
+  src: string | null | undefined;
 }
 
-export default Avatar
+const Avatar: React.FC<AvatarProps> = ({ src }) => {
+  return (
+    <Image
+      className="
+    rounded-full
+    "
+      src={src || "/images/placeholder.jpg"}
+      height={30}
+      width={30}
+      alt="Avatar"
+    />
+  );
+};
+
+export default Avatar;
