@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
+import { Nunito_Sans } from "next/font/google";
 import Navbar from "./components/navbar/Navbar";
 import ClientOnly from "./components/ClientOnly";
 // import Modal from "./components/modals/Modal";
@@ -10,7 +10,7 @@ import LoginModal from "./components/modals/LoginModal";
 import getCurrentUser from "./actions/getCurrentUser";
 import RentModal from "./components/modals/RentModal";
 
-const inter = Nunito({ subsets: ["latin"] });
+const inter =Nunito_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "AirBNB",
