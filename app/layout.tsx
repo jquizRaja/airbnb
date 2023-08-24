@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
 import Navbar from "./components/navbar/Navbar";
-// import ClientOnly from "./components/ClientOnly";
+import ClientOnly from "./components/ClientOnly";
 // import Modal from "./components/modals/Modal";
 import RegisterModal from "./components/modals/RegisterModal";
 import ToasterProvider from "./provider/ToasterProvider";
@@ -26,13 +26,13 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* <ClientOnly> */}
+        <ClientOnly>
           <ToasterProvider />
           <RentModal />
           <LoginModal />
           <RegisterModal />
           <Navbar currentUser={currentUser} />
-        {/* </ClientOnly> */}
+        </ClientOnly>
         {children}
       </body>
     </html>
