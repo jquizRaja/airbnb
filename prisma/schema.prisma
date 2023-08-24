@@ -52,7 +52,7 @@ model Listing{
   title String
   description String
   imageSrc String
-  craetedAt DateTime @default(now())
+  createdAt DateTime @default(now())
   category String
   roomCount Int
   bathroomCount Int
@@ -72,7 +72,7 @@ model Reservation{
   startDate DateTime
   endData DateTime
   totalPrice Int
-  craetedAt DateTime @default(now())
+  createdAt DateTime @default(now())
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
   listing Listing @relation(fields: [listingId],references: [id],onDelete :Cascade)

@@ -10,7 +10,7 @@ import LoginModal from "./components/modals/LoginModal";
 import getCurrentUser from "./actions/getCurrentUser";
 import RentModal from "./components/modals/RentModal";
 
-const inter =Nunito_Sans({ subsets: ["latin"] });
+const inter = Nunito_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "AirBNB",
@@ -33,7 +33,7 @@ export default async function RootLayout({
           <RegisterModal />
           <Navbar currentUser={currentUser} />
         </ClientOnly>
-        {children}
+        <div className="pb-20 pt-28">{children}</div>
       </body>
     </html>
   );
