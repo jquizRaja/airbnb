@@ -13,8 +13,8 @@ import RentModal from "./components/modals/RentModal";
 const inter = Nunito_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AirBNB",
-  description: "AirBNB",
+  title: "MyTURN",
+  description: "IT's MyTURN",
 };
 
 export default async function RootLayout({

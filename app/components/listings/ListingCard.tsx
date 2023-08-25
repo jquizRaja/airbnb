@@ -7,6 +7,7 @@ import useCountries from "@/app/hooks/useCountries";
 import { format } from "date-fns";
 import Image from "next/image";
 import HeartButton from "../HeartButton";
+import Button from "../Button";
 
 interface ListingCardProps {
   data: Listing;
@@ -71,35 +72,90 @@ const ListingCard: React.FC<ListingCardProps> = ({
     >
       <div
         className="
+       flex 
+       flex-col
+       gap-2
+       w-full
+       mt-10
+       md:-mb-10
+      "
+      >
+        <div
+          className="
       aspect-square
       w-full
       relative
       overflow-hidden
       rounded-xl
       "
-      >
-        <Image
-          fill
-          src={data.imageSrc}
-          alt="Listing"
-          className="
+        >
+          <Image
+            fill
+            src={data.imageSrc}
+            alt="Listing"
+            className="
          object-cover
          h-full
          w-full
          group-hover:scale-110
          transition
         "
-        />
-        <div className="
+          />
+          <div
+            className="
          absolute
          top-3
          right-3
-        ">
-          <HeartButton
-          listingId={data.id}
-          currentUser={currentUser}
-          />
+        "
+          >
+            <HeartButton listingId={data.id} currentUser={currentUser} />
+          </div>
         </div>
+        <div
+          className="font-semibold text-lg text-center
+           justify-center"
+        >
+          {location?.region} {location?.label}
+        </div>
+        <div
+          className="
+         font-light 
+         text-neutral-500
+         text-center
+        justify-center
+        "
+        >
+          {reservationDate || data.category}
+        </div>
+        <div
+          className="
+         flex
+         flex-row
+         items-center
+         gap-1
+         text-center
+        justify-center
+        "
+        >
+          <div
+            className="
+           font-semibold
+           text-center
+           justify-center
+          "
+          >
+            ${price}
+          </div>
+          {!reservation && <div className="font-light">Night</div>}
+        </div>
+        {onAction && actionLabel && (
+          <Button
+            disabled={disabled}
+            small
+            label={actionLabel}
+            onClick={handleCancel}
+          />
+        )}
       </div>
     </div>
   );

@@ -47,7 +47,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
           className="
              hidden
              md:block
-             text:sm
+             text-sm
              font-semibold
              py-3
              px-4
@@ -57,7 +57,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
              cursor-pointer
              "
         >
-          AirBNB your Home
+          MyTURN Home
         </div>
         <div
           onClick={toggleOpen}

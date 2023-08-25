@@ -12,7 +12,7 @@ const HeartButton: React.FC<HeartButtonProps> = ({
   listingId,
   currentUser,
 }) => {
-  const hasFavorited = true;
+  const hasFavorited = false;
   const toggleFavorite = () => {};
   return (
     <div
@@ -29,7 +29,7 @@ const HeartButton: React.FC<HeartButtonProps> = ({
         className="
         fill-white
         absolute
-        top-[15px]
+        top-[2px]
         -right-[2px]
        "
       />
@@ -37,7 +37,7 @@ const HeartButton: React.FC<HeartButtonProps> = ({
         size={26}
         className={`
         absolute
-        top-[15px]
+        top-[2px]
         -right-[2px]
         ${hasFavorited? 'fill-rose-500':'fill-neutral-500/70'}
         `}
