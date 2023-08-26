@@ -5,7 +5,7 @@ import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import useFavourite from "../hooks/useFavourite";
 
 interface HeartButtonProps {
-  listingId?: string;
+  listingId: string;
   currentUser?: SafeUser | null;
 }
 
@@ -38,7 +38,6 @@ const HeartButton: React.FC<HeartButtonProps> = ({
        "
       />
       <AiFillHeart
-        // onClick={hasFavourited}
         size={26}
         className={hasFavourited ? "fill-orange-500" : "fill-black"}
       />

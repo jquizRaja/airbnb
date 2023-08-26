@@ -7,7 +7,7 @@ import { SafeUser } from "../types";
 import useLoginModal from "./useLoginModal";
 
 interface IUseFavourite {
-  listingId?: string;
+  listingId: string;
   currentUser?: SafeUser | null;
 }
 
