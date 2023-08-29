@@ -38,7 +38,7 @@ const ListingReservation: React.FC<ListingReservationProps> = ({
          flex
          flex-row
          items-center
-         gap-2
+         gap-1
          p-4
         "
       >
@@ -88,7 +88,7 @@ const ListingReservation: React.FC<ListingReservationProps> = ({
       "
       >
         <div>Total: </div>
-        <div>${ totalPrice}</div>
+        <div>$ { totalPrice}</div>
       </div>
     </div>
   );

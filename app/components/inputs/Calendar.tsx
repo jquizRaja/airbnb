@@ -13,7 +13,7 @@ interface CalendarProps {
 const Calendar: React.FC<CalendarProps> = ({
   value,
   onChange,
-  disabledDates,
+  disabledDates
 }) => {
   return (
     <DateRange

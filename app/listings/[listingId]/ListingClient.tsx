@@ -1,6 +1,5 @@
 "use client";
-import { Reservation } from "@prisma/client";
-import { SafeListing, SafeUser } from "@/app/types";
+import { SafeListing, SafeUser, SafeReservation } from "@/app/types";
 import React, { useMemo, useState, useCallback, useEffect } from "react";
 import { categories } from "@/app/components/navbar/Categories";
 import Container from "@/app/components/Container";
@@ -22,7 +21,7 @@ const initialDateRange = {
 };
 
 interface ListingClientProps {
-  reservations?: Reservation[];
+  reservations?: SafeReservation[];
   listing: SafeListing & {
     user: SafeUser;
   };
@@ -66,7 +65,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
         totalPrice,
         startDate: dateRange.startDate,
         endDate: dateRange.endDate,
-        listingId: listing?.id,
+        listingId: listing?.id
       })
       .then(() => {
         toast.success("Listing Reserved✅✅🎈🎈🎆");
@@ -85,8 +84,9 @@ const ListingClient: React.FC<ListingClientProps> = ({
   useEffect(() => {
     if (dateRange.startDate && dateRange.endDate) {
       const dayCount = differenceInCalendarDays(
-        dateRange.endDate,
-        dateRange.startDate
+        dateRange.startDate,
+        dateRange.endDate
+       
       );
       if (dayCount && listing.price) {
         setTotalPrice(dayCount * listing.price);
