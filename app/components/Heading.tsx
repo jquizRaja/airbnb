@@ -17,6 +17,7 @@ const Heading:React.FC<HeadingProps> = ({
        <div className='
         text-2xl
         font-bold
+        mt-10
        '>
         {title}
        </div>
