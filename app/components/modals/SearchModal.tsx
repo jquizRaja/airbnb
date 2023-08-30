@@ -38,7 +38,7 @@ const SearchModal = () => {
       dynamic(() => import("../Map"), {
         ssr: false,
       }),
-    [location]
+    []
   );
 
   const onBack = useCallback(() => {
@@ -91,6 +91,8 @@ const SearchModal = () => {
     bathroomCount,
     onNext,
     params,
+    dateRange.startDate,
+    dateRange.endDate,
   ]);
 
   const actionLabel = useMemo(() => {

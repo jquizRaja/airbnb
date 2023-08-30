@@ -30,7 +30,7 @@ export default async function getListings(params: IListingsParams) {
       query.userId = userId;
     }
     if (category) {
-      query.category = CategoryInput;
+      query.category = category;
     }
 
     if (guestCount) {
@@ -83,7 +83,7 @@ export default async function getListings(params: IListingsParams) {
       createdAt: listing.createdAt.toISOString(),
     }));
     return safeListings;
-  } catch (error:any) {
+  } catch (error: any) {
     throw new Error(error);
   }
 }
