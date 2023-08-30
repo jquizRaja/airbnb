@@ -13,6 +13,7 @@ import Input from "../inputs/Input";
 import { toast } from "react-hot-toast";
 import Button from "../Button";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const LoginModal = () => {
   const router = useRouter();
@@ -51,10 +52,10 @@ const LoginModal = () => {
     });
   };
 
-  const toggle= useCallback(()=>{
-      loginModal.onClose()
-      registerModal.onOpen()
-  } ,[loginModal,registerModal])
+  const toggle = useCallback(() => {
+    loginModal.onClose();
+    registerModal.onOpen();
+  }, [loginModal, registerModal]);
 
   const bodyContent = (
     <div
@@ -117,7 +118,12 @@ const LoginModal = () => {
       "
       >
         <div className="justify-center flex flex-row items-center gap-2">
-          <div>First time using AirBNB?</div>
+          <div>
+            First time using{" "}
+            <Link className="text-bold underline" href="/">
+              myTURN?
+            </Link>{" "}
+          </div>
           <div
             onClick={toggle}
             className="
