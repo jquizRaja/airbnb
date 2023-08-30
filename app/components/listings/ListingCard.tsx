@@ -1,6 +1,5 @@
 "use client";
 import { SafeListing, SafeReservation, SafeUser } from "@/app/types";
-import { Reservation } from "@prisma/client";
 import React, { useCallback, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import useCountries from "@/app/hooks/useCountries";
@@ -144,7 +143,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
            justify-center
           "
           >
-            ${price}
+            $ {price}
           </div>
           {!reservation && <div className="font-light">Night</div>}
         </div>
