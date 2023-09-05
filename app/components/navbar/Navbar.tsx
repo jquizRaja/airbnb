@@ -1,5 +1,6 @@
 "use client";
 import Container from "../Container";
+import ThemeSwitcher from "../ThemeSwitcher";
 import Categories from "./Categories";
 import Logo from "./Logo";
 import Search from "./Search";
@@ -34,6 +35,7 @@ const Navbar:React.FC<NavbarProps> = ({
           >
             <Logo />
             <Search />
+            <ThemeSwitcher />
             <UserMenu currentUser={currentUser}/>
           </div>
         </Container>

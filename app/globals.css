@@ -7,6 +7,14 @@ body,
 :root {
   height: 100%;
 }
+body {
+  color: black;
+  background-color: white;
+}
+[data-theme="dark"] body {
+  background-color: silver;
+  color: black ;
+}
 .leaflet-bottom,
 .leaflet-control,
 .leaflet-pane,
