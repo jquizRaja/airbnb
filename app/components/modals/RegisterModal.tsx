@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { AiFillGithub } from "react-icons/ai";
+import { AiFillGithub, AiFillInstagram, AiFillFacebook } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import { useState, useCallback } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
@@ -113,6 +113,18 @@ const RegisterModal = () => {
         icon={AiFillGithub}
         onClick={() => signIn("github")}
       />
+      <Button
+        outline
+        label="Continue with FaceBook"
+        icon={AiFillFacebook}
+        onClick={() => signIn("facebook")}
+      />
+      <Button
+        outline
+        label="Continue with InstaGram"
+        icon={AiFillInstagram}
+        onClick={() => signIn("instagram")}
+      />
       <div
         className="
       text-neutral-500
@@ -122,13 +134,17 @@ const RegisterModal = () => {
       "
       >
         <div className="justify-center flex flex-row items-center gap-2">
-          <div>Already have an Account?</div>
+          <div className="hover:uppercase hover:underline hover:font-bold">
+            Already have an Account?
+          </div>
           <div
             onClick={toggle}
             className="
            text-neutral-800
            cursor-pointer
            hover:underline
+           hover:uppercase
+           hover:font-bold
           "
           >
             Log In

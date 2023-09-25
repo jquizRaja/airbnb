@@ -76,7 +76,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
        gap-2
        w-full
        mt-10
-      //  md:-mb-12
+       -mb-10
       "
       >
         <div

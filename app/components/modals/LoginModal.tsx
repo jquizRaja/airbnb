@@ -1,7 +1,7 @@
 "use client";
 import { signIn } from "next-auth/react";
 import React from "react";
-import { AiFillGithub } from "react-icons/ai";
+import { AiFillGithub, AiFillInstagram, AiFillFacebook } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import { useState, useCallback } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
@@ -109,6 +109,18 @@ const LoginModal = () => {
         icon={AiFillGithub}
         onClick={() => signIn("github")}
       />
+      <Button
+        outline
+        label="Continue with FaceBook"
+        icon={AiFillFacebook}
+        onClick={() => signIn("facebook")}
+      />
+      <Button
+        outline
+        label="Continue with InstaGram"
+        icon={AiFillInstagram}
+        onClick={() => signIn("instagram")}
+      />
       <div
         className="
       text-neutral-500
@@ -120,8 +132,8 @@ const LoginModal = () => {
         <div className="justify-center flex flex-row items-center gap-2">
           <div>
             First time using{" "}
-            <Link className="text-bold underline" href="/">
-              myTURN?
+            <Link className="text-bold underline hover:underline hover:uppercase hover:font-bold" href="/">
+              myturnNOW
             </Link>{" "}
           </div>
           <div
@@ -130,6 +142,8 @@ const LoginModal = () => {
            text-neutral-800
            cursor-pointer
            hover:underline
+           hover:uppercase
+           hover:font-bold
           "
           >
             Create an Account
